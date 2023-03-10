@@ -1,0 +1,98 @@
+snippet latexinit "setup latex doc"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LATEX-TEMPLATE TECHNISCH RAPPORT
+%-------------------------------------------------------------------------------
+% Voor informatie over het technisch rapport, zie
+% http://practicumav.nl/onderzoeken/rapport.html
+% Voor readme en meest recente versie van het template, zie
+% https://gitlab-fnwi.uva.nl/informatica/LaTeX-template.git
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%	PACKAGES EN DOCUMENT CONFIGURATIE
+%-------------------------------------------------------------------------------
+
+\documentclass{uva-inf-article}
+\usepackage[english]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{cleveref}
+\usepackage{float}
+\usepackage{caption}
+
+
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}  %Expected value operator
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\indicator}{\mathbbm{1}}
+\newcommand{\Lnorm}{\mathcal{L}^1(S, \Sigma, \mu)}
+\newcommand{\Lpnorm}[1]{\mathcal{L}^{#1}(S, \Sigma, \mu)}
+\newcommand{\limn}{\lim\limits_{n \rightarrow \infty}}
+
+
+% Zodat de listings er mooi uit zien, ook bij lange regels:
+\lstset{
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+% Relevant voor refereren vanaf blok 5
+%\usepackage[style=authoryear-comp]{biblatex}
+%\addbibresource{bib}
+
+%-------------------------------------------------------------------------------
+%	GEGEVENS VOOR IN DE TITEL
+%-------------------------------------------------------------------------------
+
+% Vul de naam van de opdracht in.
+\assignment{Scriptie klad}
+% Vul het soort opdracht in.
+\assignmenttype{}
+% Vul de titel van de eindopdracht in.
+\title{Assignment 1}
+
+% Vul de volledige namen van alle auteurs in.
+\authors{Gijs Bijsterbosch}
+% Vul de corresponderende UvAnetID's in.
+
+% Vul altijd de naam in van diegene die het nakijkt, tutor of docent.
+%\tutor{Naam van de tutor}
+% Vul eventueel ook de naam van de docent of vakcoordinator toe.
+%\docent{}
+% Vul hier de naam van de PAV-groep  in.
+%\group{5}
+% Vul de naam van de cursus in.
+%\course{Naam van de (gekoppelde) cursus}
+% Te vinden op onder andere Datanose.
+\courseid{}
+
+% Dit is de datum die op het document komt te staan. Standaard is dat vandaag.
+\date{\today}
+
+%-------------------------------------------------------------------------------
+%	VOORPAGINA
+%-------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+\section*{Introductie}
+
+
+\end{document}
+endsnippet
+snippet beg "begin{} / end{}" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
